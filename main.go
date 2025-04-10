@@ -1,26 +1,23 @@
 package main
 
-import (
-    "fmt"
-	"strings"
-	"sort"
+import ("fmt" 
+
 )
 func main() {
-    greeting := "Hello my friends!"
-	fmt.Println(strings.Contains(greeting,"friends"))
-	fmt.Println(strings.ReplaceAll(greeting, "Hello", "Hi"))
-	fmt.Println(strings.ToUpper(greeting))
-	fmt.Println(strings.Index(greeting, "my"))
-	fmt.Println(strings.Split(greeting, "friends"))
-	ages := []int{30, 25, 22}
-	sort.Ints(ages)
-	fmt.Println(ages)
-	index := sort.SearchInts(ages, 30)
-	fmt.Println(index)
-	names := []string {"Caruzo", "Almofadinha", "Gobas"}
-	sort.Strings(names)
-	fmt.Println(names)
-	fmt.Println(sort.SearchStrings(names, "Caruzo"))
+	var number = [5]int{}
+	fmt.Println("Escolha o primeiro número: ")
+	fmt.Scan(&number[0])
+	fmt.Println("Escolha o segundo número: ")
+	fmt.Scan(&number[1])
+	fmt.Println("Escolha o terceiro número: ")
+	fmt.Scan(&number[2])
+	fmt.Println("Escolha o quarto número: ")
+	fmt.Scan(&number[3])
+	fmt.Println("Escolha o quinto número: ")
+	fmt.Scan(&number[4])
+	var soma = number[0] + number [1] + number[2] + number[3] + number[4]
+	fmt.Println("A soma é: ", soma)
+
+
+  
 }
-		
-		
