@@ -1,35 +1,34 @@
 package main
 
 import (
-	"fmt" 
+	"fmt" )
 
-)
-func main() {
-	var saldo int = 20000
-	var saque int
-	var deposito int
-	var opcao string = "deposito || saque"
-    fmt.Println("Olá! Qual das opções você deseja? saque, deposito ou sair? ")
-	fmt.Scan(&opcao)
-	if opcao == "saque" {
-		fmt.Println("Quanto deseja sacar?")
-		fmt.Scan(&saque)
-		saldo -= saque
-	} else if opcao == "deposito" {
-		fmt.Println("Quanto você deseja depositar? ")
-		fmt.Scan(&deposito)
-		saldo += deposito
-	} else  {
-		fmt.Println("Você saiu da sua conta")
-    }
-	fmt.Println("Saldo atual: ", saldo)
-          
+func DadosPessoais(nome string, idade int) (int, string){
+	var classificação string
+	if idade >= 18 {
+	  classificação = "Você é maior de idade"
+	} else {
+		classificação = "Você é menor de idade"
+}
+return idade, classificação
 
-
-	
 }
 
+func main() {
+	var idadepessoa int
+	var nomepessoa string
+	fmt.Println("Digite seu nome: ")
+	fmt.Scan(&nomepessoa)
+	fmt.Println("Digite sua idade: ")
+	fmt.Scan(&idadepessoa)
+	idade, classificação := DadosPessoais(nomepessoa, idadepessoa)
+	fmt.Println(idade)
+	fmt.Println(classificação)
 	
+ } 
 
+
+
+ 
 
 
